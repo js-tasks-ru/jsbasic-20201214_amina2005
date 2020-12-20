@@ -5,15 +5,14 @@ function print(text) {
   console.log(text);
 }
 
-/**
- * Эту функцию нужно поменять так,
- * чтобы функция sayHello работала корректно
- * @param {string | null} name
- * @returns {boolean}
- */
 function isValid(name) {
-  // ваш код...
+if (name == "" || name == null){
+return false;
+} else if (name.lentgth<4){
+  return false;
 }
+}
+
 
 function sayHello() {
   let userName = prompt('Введите ваше имя');
