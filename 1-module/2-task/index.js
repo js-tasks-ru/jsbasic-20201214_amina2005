@@ -2,7 +2,7 @@
  * Эту функцию трогать не нужно
  */
 function print(text) {
-  console.log(text);
+    console.log(text);
 }
 
 /**
@@ -11,16 +11,27 @@ function print(text) {
  * @param {string | null} name
  * @returns {boolean}
  */
+
 function isValid(name) {
-  // ваш код...
+    if (name == " ") {
+        return false;
+    } else if (name == null) {
+        return false;
+    } else if (name.length < 4) {
+        return false;
+    } else {
+        return true;
+    }
 }
 
-function sayHello() {
-  let userName = prompt('Введите ваше имя');
 
-  if (isValid(userName)) {
-    print(`Welcome back, ${userName}!`);
-  } else {
-    print('Некорректное имя');
-  }
+
+function sayHello() {
+    let userName = prompt('Введите ваше имя');
+
+    if (isValid(userName)) {
+        print(`Welcome back, ${userName}!`);
+    } else {
+        print('Некорректное имя');
+    }
 }
