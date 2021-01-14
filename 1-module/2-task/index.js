@@ -13,17 +13,12 @@ function print(text) {
  */
 
 function isValid(name) {
-    if (name == " ") {
-        return false;
-    } else if (name == null) {
-        return false;
-    } else if (name.length < 4) {
+    if (name == null || name.includes(' ') || name.length < 4) {
         return false;
     } else {
         return true;
     }
 }
-
 
 
 function sayHello() {
@@ -35,3 +30,4 @@ function sayHello() {
         print('Некорректное имя');
     }
 }
+sayHello();

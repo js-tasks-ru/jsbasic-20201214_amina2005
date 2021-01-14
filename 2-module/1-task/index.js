@@ -5,13 +5,15 @@
  */
 
 function sumSalary(salaries) {
-    delete salaries["month"];
-    delete salaries["currency"];
-    delete salaries["isPayed"];
-
     let sum = 0;
-    for (let salary of Object.values(salaries)) {
-        sum += salary;
+
+    for (let key in salaries) {
+        if (
+            typeof salaries[key] === "number" &&
+            isFinite(salaries[key])
+        ) {
+            sum += salaries[key];
+        }
     }
 
     return sum;
