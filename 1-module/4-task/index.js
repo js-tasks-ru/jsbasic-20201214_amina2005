@@ -9,4 +9,4 @@ function checkSpam(str) {
         return true;
     }
     return false;
-}
+};
