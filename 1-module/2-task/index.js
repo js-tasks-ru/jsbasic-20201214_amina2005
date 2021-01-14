@@ -18,7 +18,7 @@ function isValid(name) {
     } else {
         return true;
     }
-}
+};
 
 
 function sayHello() {
